@@ -4,14 +4,23 @@ import { useProducts } from "@/hooks/useProducts";
 
 export default function Home() {
 
-    const { products, isLoading, error } = useProducts();
+    const { products, isLoading, isError, refetch, error } = useProducts();
 
     if (isLoading) {
-        return <ActivityIndicator>Loading...</ActivityIndicator>;
+        return <ActivityIndicator></ActivityIndicator>;
     }
 
-    if (error) {
-        return Alert.alert("Something went wrong.", error);
+    if (isError) {
+        return Alert.alert("Something went wrong.", error, [
+            {
+                text: "Refresh",
+                onPress: () => refetch,
+            },
+            {
+                text: "Cancel",
+                style: "cancel"
+            }
+        ]);
     }
 
 

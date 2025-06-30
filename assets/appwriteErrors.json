@@ -1,0 +1,562 @@
+{
+  "general": {
+    "general_mock": {
+      "code": 400,
+      "message": "A general test error occurred."
+    },
+    "general_argument_invalid": {
+      "code": 400,
+      "message": "The information you provided is invalid. Please check your input and try again."
+    },
+    "general_query_limit_exceeded": {
+      "code": 400,
+      "message": "You've requested too much information at once. Please narrow your search."
+    },
+    "general_query_invalid": {
+      "code": 400,
+      "message": "The search query is invalid. Please correct it and try again."
+    },
+    "general_cursor_not_found": {
+      "code": 400,
+      "message": "The item you are looking for has been moved or deleted."
+    },
+    "general_provider_failure": {
+      "code": 400,
+      "message": "There was a problem with our service provider. Please try again later."
+    },
+    "project_unknown": {
+      "code": 400,
+      "message": "The project could not be found. Please contact support if this issue persists."
+    },
+    "project_invalid_success_url": {
+      "code": 400,
+      "message": "The redirect URL for successful operations is invalid."
+    },
+    "project_invalid_failure_url": {
+      "code": 400,
+      "message": "The redirect URL for failed operations is invalid."
+    },
+    "project_reserved_project": {
+      "code": 400,
+      "message": "This project ID is reserved. Please choose a different one."
+    },
+    "project_smtp_config_invalid": {
+      "code": 400,
+      "message": "The email configuration is invalid. Please contact support."
+    },
+    "project_key_expired": {
+      "code": 401,
+      "message": "Your session has expired. Please log in again."
+    },
+    "rule_verification_failed": {
+      "code": 401,
+      "message": "Domain verification failed. Please check your DNS settings."
+    },
+    "project_template_default_deletion": {
+      "code": 401,
+      "message": "The default template cannot be deleted."
+    },
+    "general_unknown_origin": {
+      "code": 403,
+      "message": "Access from your current domain is not allowed. Please contact support."
+    },
+    "general_access_forbidden": {
+      "code": 401,
+      "message": "You are forbidden from accessing this resource."
+    },
+    "general_unauthorized_scope": {
+      "code": 401,
+      "message": "You do not have the required permissions to perform this action."
+    },
+    "general_route_not_found": {
+      "code": 404,
+      "message": "The requested API endpoint could not be found."
+    },
+    "webhook_not_found": {
+      "code": 404,
+      "message": "The requested webhook could not be found."
+    },
+    "rule_resource_not_found": {
+      "code": 404,
+      "message": "The requested resource could not be found."
+    },
+    "rule_not_found": {
+      "code": 404,
+      "message": "The requested rule could not be found."
+    },
+    "key_not_found": {
+      "code": 404,
+      "message": "The requested key could not be found."
+    },
+    "platform_not_found": {
+      "code": 404,
+      "message": "The requested platform could not be found."
+    },
+    "project_not_found": {
+      "code": 404,
+      "message": "The project could not be found. Please check your project ID."
+    },
+    "router_host_not_found": {
+      "code": 404,
+      "message": "The requested host is not trusted. Please configure a custom domain."
+    },
+    "general_not_implemented": {
+      "code": 405,
+      "message": "This feature is not yet implemented."
+    },
+    "project_already_exists": {
+      "code": 409,
+      "message": "A project with this ID already exists. Please choose another one."
+    },
+    "rule_already_exists": {
+      "code": 409,
+      "message": "This domain is already in use. Please choose another one."
+    },
+    "project_provider_disabled": {
+      "code": 412,
+      "message": "This sign-in method is currently disabled. Please contact support."
+    },
+    "general_rate_limit_exceeded": {
+      "code": 429,
+      "message": "You are making too many requests. Please wait a moment and try again."
+    },
+    "general_unknown": {
+      "code": 500,
+      "message": "An unknown error occurred. Please try again or contact support."
+    },
+    "general_server_error": {
+      "code": 500,
+      "message": "An internal server error occurred. We are working to fix it. Please try again later."
+    },
+    "general_protocol_unsupported": {
+      "code": 500,
+      "message": "The connection protocol is not supported. Please ensure you are using a secure connection (HTTPS)."
+    },
+    "general_codes_disabled": {
+      "code": 500,
+      "message": "Invitation codes are disabled on this server."
+    },
+    "router_domain_not_configured": {
+      "code": 500,
+      "message": "The server domain is not configured correctly. Please contact support."
+    },
+    "general_usage_disabled": {
+      "code": 501,
+      "message": "Usage statistics are not enabled on this server."
+    },
+    "project_provider_unsupported": {
+      "code": 501,
+      "message": "This sign-in provider is not supported."
+    },
+    "general_service_disabled": {
+      "code": 503,
+      "message": "This service is temporarily disabled. Please try again later."
+    },
+    "general_smtp_disabled": {
+      "code": 503,
+      "message": "Email services (SMTP) are currently disabled. Please contact support."
+    },
+    "general_phone_disabled": {
+      "code": 503,
+      "message": "Phone services (SMS) are currently disabled. Please contact support."
+    }
+  },
+  "authentication": {
+    "user_password_mismatch": {
+      "code": 400,
+      "message": "The passwords you entered do not match. Please re-enter them."
+    },
+    "password_recently_used": {
+      "code": 400,
+      "message": "This password has been used recently. Please choose a new one."
+    },
+    "password_personal_data": {
+      "code": 400,
+      "message": "Your password should not contain personal information. Please choose a stronger password."
+    },
+    "user_phone_not_found": {
+      "code": 400,
+      "message": "This account does not have a phone number associated with it."
+    },
+    "user_missing_id": {
+      "code": 400,
+      "message": "Could not retrieve user ID from the authentication provider."
+    },
+    "user_oauth2_bad_request": {
+      "code": 400,
+      "message": "The authentication provider rejected the request. Please try again."
+    },
+    "user_jwt_invalid": {
+      "code": 401,
+      "message": "Your session token is invalid. Please log in again."
+    },
+    "user_blocked": {
+      "code": 401,
+      "message": "This account has been blocked. Please contact support."
+    },
+    "user_invalid_token": {
+      "code": 401,
+      "message": "The provided token is invalid. Please try again."
+    },
+    "user_email_not_whitelisted": {
+      "code": 401,
+      "message": "Registration is restricted. Please contact an administrator for access."
+    },
+    "user_invalid_code": {
+      "code": 401,
+      "message": "The provided code is not valid. Please check it and try again."
+    },
+    "user_ip_not_whitelisted": {
+      "code": 401,
+      "message": "Access from your current IP address is restricted."
+    },
+    "user_invalid_credentials": {
+      "code": 401,
+      "message": "Invalid credentials. Please check your email and password."
+    },
+    "user_anonymous_console_prohibited": {
+      "code": 401,
+      "message": "Anonymous users are not allowed."
+    },
+    "user_session_already_exists": {
+      "code": 401,
+      "message": "You are already logged in. Please log out before creating an anonymous session."
+    },
+    "user_unauthorized": {
+      "code": 401,
+      "message": "You are not authorized to perform this action."
+    },
+    "user_oauth2_unauthorized": {
+      "code": 401,
+      "message": "The authentication provider rejected the request. Please ensure you have granted the necessary permissions."
+    },
+    "team_invalid_secret": {
+      "code": 401,
+      "message": "The team invitation link is invalid or has expired. Please request a new one."
+    },
+    "team_invite_mismatch": {
+      "code": 401,
+      "message": "This invitation is for a different user."
+    },
+    "user_not_found": {
+      "code": 404,
+      "message": "The requested user could not be found."
+    },
+    "user_session_not_found": {
+      "code": 404,
+      "message": "Your session was not found. Please log in again."
+    },
+    "user_identity_not_found": {
+      "code": 404,
+      "message": "Could not find your identity. Please sign in with your provider first."
+    },
+    "team_not_found": {
+      "code": 404,
+      "message": "The requested team could not be found."
+    },
+    "team_invite_not_found": {
+      "code": 404,
+      "message": "The requested team invitation could not be found."
+    },
+    "team_membership_mismatch": {
+      "code": 404,
+      "message": "This membership does not belong to the specified team."
+    },
+    "membership_not_found": {
+      "code": 404,
+      "message": "The requested membership could not be found."
+    },
+    "user_already_exists": {
+      "code": 409,
+      "message": "A user with this ID, email, or phone number already exists."
+    },
+    "user_email_already_exists": {
+      "code": 409,
+      "message": "A user with this email already exists."
+    },
+    "user_phone_already_exists": {
+      "code": 409,
+      "message": "A user with this phone number already exists."
+    },
+    "team_invite_already_exists": {
+      "code": 409,
+      "message": "This user has already been invited or is already a member of the team."
+    },
+    "team_already_exists": {
+      "code": 409,
+      "message": "A team with this ID already exists. Please choose a different ID."
+    },
+    "membership_already_confirmed": {
+      "code": 409,
+      "message": "This membership has already been confirmed."
+    },
+    "user_password_reset_required": {
+      "code": 412,
+      "message": "A password reset is required for this account."
+    },
+    "user_oauth2_provider_error": {
+      "code": 424,
+      "message": "The authentication provider returned an error. Please try again."
+    },
+    "user_count_exceeded": {
+      "code": 501,
+      "message": "The maximum number of users for this project has been reached."
+    },
+    "user_auth_method_unsupported": {
+      "code": 501,
+      "message": "This authentication method is not supported or has been disabled."
+    }
+  },
+  "database": {
+    "collection_limit_exceeded": {
+      "code": 400,
+      "message": "The maximum number of collections has been reached."
+    },
+    "document_invalid_structure": {
+      "code": 400,
+      "message": "The document structure is invalid. Please check the data and try again."
+    },
+    "document_missing_data": {
+      "code": 400,
+      "message": "The document is missing required data."
+    },
+    "document_missing_payload": {
+      "code": 400,
+      "message": "No data or permissions were provided to update."
+    },
+    "attribute_unknown": {
+      "code": 400,
+      "message": "A required attribute could not be found. Please ensure it is available."
+    },
+    "attribute_not_available": {
+      "code": 400,
+      "message": "The requested attribute is not yet available. Please try again later."
+    },
+    "attribute_format_unsupported": {
+      "code": 400,
+      "message": "The format of the attribute is not supported."
+    },
+    "attribute_default_unsupported": {
+      "code": 400,
+      "message": "Default values cannot be set for array or required attributes."
+    },
+    "attribute_limit_exceeded": {
+      "code": 400,
+      "message": "The maximum number of attributes has been reached."
+    },
+    "attribute_value_invalid": {
+      "code": 400,
+      "message": "The value provided for the attribute is invalid."
+    },
+    "attribute_type_invalid": {
+      "code": 400,
+      "message": "The type of the attribute is invalid."
+    },
+    "index_limit_exceeded": {
+      "code": 400,
+      "message": "The maximum number of indexes has been reached."
+    },
+    "index_invalid": {
+      "code": 400,
+      "message": "The index is invalid."
+    },
+    "document_delete_restricted": {
+      "code": 403,
+      "message": "This document cannot be deleted because it is referenced by another document."
+    },
+    "execution_not_found": {
+      "code": 404,
+      "message": "The requested execution could not be found."
+    },
+    "database_not_found": {
+      "code": 404,
+      "message": "The requested database could not be found."
+    },
+    "collection_not_found": {
+      "code": 404,
+      "message": "The requested collection could not be found."
+    },
+    "document_not_found": {
+      "code": 404,
+      "message": "The requested document could not be found."
+    },
+    "attribute_not_found": {
+      "code": 404,
+      "message": "The requested attribute could not be found."
+    },
+    "index_not_found": {
+      "code": 404,
+      "message": "The requested index could not be found."
+    },
+    "database_already_exists": {
+      "code": 409,
+      "message": "A database with this ID already exists."
+    },
+    "collection_already_exists": {
+      "code": 409,
+      "message": "A collection with this ID already exists."
+    },
+    "document_already_exists": {
+      "code": 409,
+      "message": "A document with this ID already exists."
+    },
+    "document_update_conflict": {
+      "code": 409,
+      "message": "The document on the server is newer than your local version. Please refresh and try again."
+    },
+    "attribute_already_exists": {
+      "code": 409,
+      "message": "An attribute with this ID already exists."
+    },
+    "index_already_exists": {
+      "code": 409,
+      "message": "An index with this ID already exists."
+    }
+  },
+  "storage": {
+    "storage_device_not_found": {
+      "code": 400,
+      "message": "The requested storage device could not be found."
+    },
+    "storage_file_empty": {
+      "code": 400,
+      "message": "The file you are trying to upload is empty."
+    },
+    "storage_file_type_unsupported": {
+      "code": 400,
+      "message": "This file type is not supported."
+    },
+    "storage_invalid_file_size": {
+      "code": 400,
+      "message": "The file size is too large. Please upload a smaller file."
+    },
+    "storage_invalid_content_range": {
+      "code": 400,
+      "message": "The content range for the file upload is invalid."
+    },
+    "storage_invalid_appwrite_id": {
+      "code": 400,
+      "message": "The provided file ID is invalid."
+    },
+    "storage_invalid_file": {
+      "code": 403,
+      "message": "The uploaded file is invalid or corrupted. Please check it and try again."
+    },
+    "storage_file_not_found": {
+      "code": 404,
+      "message": "The requested file could not be found."
+    },
+    "storage_bucket_not_found": {
+      "code": 404,
+      "message": "The requested storage bucket could not be found."
+    },
+    "storage_file_already_exists": {
+      "code": 409,
+      "message": "A file with this ID already exists."
+    },
+    "storage_bucket_already_exists": {
+      "code": 409,
+      "message": "A storage bucket with this ID already exists."
+    },
+    "storage_invalid_range": {
+      "code": 416,
+      "message": "The requested range for the file is not valid."
+    }
+  },
+  "functions": {
+    "build_not_ready": {
+      "code": 400,
+      "message": "The function build is not yet ready for execution. Please wait."
+    },
+    "build_in_progress": {
+      "code": 400,
+      "message": "A build is already in progress. Please wait for it to complete."
+    },
+    "installation_not_found": {
+      "code": 404,
+      "message": "The function installation could not be found."
+    },
+    "provider_repository_not_found": {
+      "code": 404,
+      "message": "The source code repository could not be found."
+    },
+    "repository_not_found": {
+      "code": 404,
+      "message": "The repository could not be found."
+    },
+    "function_not_found": {
+      "code": 404,
+      "message": "The requested function could not be found."
+    },
+    "function_runtime_unsupported": {
+      "code": 404,
+      "message": "The function's runtime is not supported or the entrypoint is missing."
+    },
+    "build_not_found": {
+      "code": 404,
+      "message": "The requested build could not be found."
+    },
+    "deployment_not_found": {
+      "code": 404,
+      "message": "The requested deployment could not be found."
+    },
+    "variable_not_found": {
+      "code": 404,
+      "message": "The requested variable could not be found."
+    },
+    "provider_contribution_conflict": {
+      "code": 409,
+      "message": "This external contribution has already been authorized."
+    },
+    "variable_already_exists": {
+      "code": 409,
+      "message": "A variable with this ID already exists."
+    }
+  },
+  "migrations": {
+    "migration_not_found": {
+      "code": 404,
+      "message": "The requested migration could not be found."
+    },
+    "migration_already_exists": {
+      "code": 409,
+      "message": "A migration with this ID already exists."
+    },
+    "migration_in_progress": {
+      "code": 409,
+      "message": "A migration is already in progress. Please check the status in your console."
+    }
+  },
+  "avatars": {
+    "avatar_set_not_found": {
+      "code": 404,
+      "message": "The requested avatar set could not be found."
+    },
+    "avatar_not_found": {
+      "code": 404,
+      "message": "The requested avatar could not be found."
+    },
+    "avatar_image_not_found": {
+      "code": 404,
+      "message": "The image for the avatar could not be found at the URL."
+    },
+    "avatar_remote_url_failed": {
+      "code": 404,
+      "message": "Failed to fetch the favicon from the provided URL."
+    },
+    "avatar_icon_not_found": {
+      "code": 404,
+      "message": "The requested favicon could not be found."
+    }
+  },
+  "graphql": {
+    "graphql_no_query": {
+      "code": 400,
+      "message": "The 'query' parameter is missing from your request."
+    },
+    "graphql_too_many_queries": {
+      "code": 400,
+      "message": "You have sent too many queries at once. Please batch them or reduce the number."
+    }
+  }
+}
